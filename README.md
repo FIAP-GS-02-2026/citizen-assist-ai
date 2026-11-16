@@ -1,6 +1,6 @@
 # Citizen Assist AI Mobilidade
 
-Assistente no terminal que orienta quem usa ônibus na cidade de São Paulo: gratuidades, Bilhete Único, tarifas, acessibilidade e onde reclamar. Responde só com informação de fontes oficiais, mostra a fonte e a data em que foi conferida e avisa que não é canal oficial.
+Assistente no terminal que orienta quem usa ônibus na cidade de São Paulo sobre gratuidades, Bilhete Único, tarifas, acessibilidade e onde reclamar. Ele responde só com informações de fontes oficiais, mostra a fonte e a data em que ela foi conferida e avisa que não é um canal oficial.
 
 Global Solution 2026.2 · FIAP · Ciência da Computação 1CCR · Pensamento Computacional e Automação com Python.
 
@@ -14,28 +14,18 @@ Global Solution 2026.2 · FIAP · Ciência da Computação 1CCR · Pensamento Co
 
 ## Público e problema
 
-**Público:** quem depende de ônibus municipal em São Paulo, em especial:
+**Público:** quem depende do ônibus municipal em São Paulo, principalmente pessoas idosas, pessoas com deficiência, estudantes e pessoas com pouca familiaridade digital.
 
-- pessoas idosas;
-- pessoas com deficiência;
-- estudantes;
-- pessoas com pouca familiaridade digital.
-
-**Problema:** a informação sobre direitos e serviços do transporte existe, mas está espalhada entre SP156, SPTrans e Prefeitura, e há regras antigas circulando. Exemplos:
-
-- muitos sites ainda dizem que a gratuidade do idoso começa aos 65 anos, mas o Decreto Municipal 62.057/2022 estendeu a gratuidade a partir dos 60;
-- pouca gente sabe que o ônibus é de graça aos domingos.
-
-O assistente junta essas orientações num só lugar, em linguagem simples e com a fonte.
+**Problema:** a informação sobre direitos e serviços do transporte existe, mas está espalhada entre SP156, SPTrans e Prefeitura. Ainda circula informação antiga, como a de que a gratuidade do idoso só começa aos 65 anos; desde o Decreto Municipal 62.057/2022 ela vale a partir dos 60. Pouca gente também sabe que o ônibus municipal é de graça aos domingos. O assistente reúne essas orientações num só lugar, em linguagem simples e com a fonte.
 
 ## ODS relacionados
 
-- **ODS 11 (Cidades e comunidades sustentáveis)**, meta 11.2: acesso a transporte seguro, acessível e sustentável, com atenção a idosos e pessoas com deficiência.
-- **ODS 10 (Redução das desigualdades)**: informação sobre gratuidades para quem mais precisa.
+- **ODS 11 (Cidades e comunidades sustentáveis)**, meta 11.2: acesso a transporte seguro, acessível e sustentável, com atenção a pessoas idosas e com deficiência.
+- **ODS 10 (Redução das desigualdades)**: informação sobre gratuidades para quem mais precisa delas.
 
 ## Como executar
 
-Requer Python 3.9 ou superior. Não usa bibliotecas externas.
+Requer Python 3.9 ou superior e não usa bibliotecas externas.
 
 ```bash
 python main.py
@@ -53,14 +43,14 @@ python -m unittest -v
 citizen-assist-ai/
 ├── README.md
 ├── main.py                  menu principal
-├── orientacao.py            classe Orientacao
+├── orientacao.py            classe Orientacao (um registro da base)
 ├── base_conhecimento.py     classe BaseConhecimento e a busca por pontuação
 ├── assistente.py            classe Assistente: atendimento, histórico, indicadores e CSV
 ├── data/
 │   ├── base_conhecimento.json   orientações com fonte oficial
 │   ├── historico.json           atendimentos registrados
 │   └── atendimentos.csv         exportação dos atendimentos
-└── tests/                   bateria de testes (unittest)
+└── tests/                   47 testes (unittest) e bateria de perguntas reais
 ```
 
 **Composição das classes:**
@@ -73,20 +63,22 @@ Assistente
 
 ## Base de conhecimento
 
-`data/base_conhecimento.json` é uma lista de dicionários, um por orientação, com os campos `id`, `categoria`, `titulo`, `palavras_chave`, `resposta`, `documentos`, `onde`, `fonte` e `verificado_em`.
+O arquivo `data/base_conhecimento.json` é uma lista de dicionários, um por orientação. Cada registro tem os campos `id`, `categoria`, `titulo`, `palavras_chave`, `resposta`, `documentos`, `onde`, `fonte` e `verificado_em`.
 
-- 17 orientações em 6 categorias: Gratuidades, Tarifas, Bilhete Único, Acessibilidade, Atendimento e reclamação, Linhas e horários.
-- Todas foram conferidas em 16/11/2026 nas páginas oficiais citadas.
+- São 17 orientações em 6 categorias: Gratuidades, Tarifas, Bilhete Único, Acessibilidade, Atendimento e reclamação, Linhas e horários.
+- Em 16/11/2026, a equipe abriu cada página oficial citada e conferiu, frase a frase, se a resposta estava escrita nela. O que não estava foi retirado.
+- Ao carregar, o programa valida os tipos de cada registro. Registro incompleto, com tipo errado ou com `id` repetido é ignorado com aviso.
 
 **Uso de dicionários e tuplas:**
 
-- cada registro do JSON é lido como dicionário e vira um objeto `Orientacao`;
-- os campos obrigatórios ficam numa tupla (`CAMPOS_OBRIGATORIOS`);
-- a busca devolve tuplas `(pontos, orientacao)`.
+- Cada registro do JSON é lido como dicionário e vira um objeto `Orientacao`.
+- Os campos obrigatórios ficam numa tupla (`CAMPOS_OBRIGATORIOS`), e as colunas do CSV em outra (`COLUNAS_CSV`).
+- A busca devolve tuplas `(pontos, orientacao)`.
+- Cada atendimento é guardado como dicionário no histórico.
 
 ## Regra de pontuação
 
-A pergunta, as palavras-chave e o título são comparados sem acentos, sem pontuação e em minúsculas (`normalizar()`).
+A pergunta, as palavras-chave e o título são comparados sem acentos, sem pontuação e em minúsculas pela função `normalizar()`.
 
 | Regra | Resultado |
 | --- | --- |
@@ -96,25 +88,37 @@ A pergunta, as palavras-chave e o título são comparados sem acentos, sem pontu
 | Melhor orientação com 3 a 5 pontos | Confiança MÉDIA |
 | Nenhuma orientação com 3 pontos | "Não encontrei" + sugestão de categorias |
 
-`buscar()` devolve a lista de tuplas `(pontos, orientacao)` da maior para a menor pontuação. Em empate, vence o menor `id`. O assistente mostra a melhor orientação e até duas alternativas com pelo menos 3 pontos.
+`buscar()` devolve a lista de tuplas `(pontos, orientacao)` da maior para a menor pontuação. Em empate, vem primeiro o menor `id`. O assistente mostra a melhor orientação e até duas alternativas com pelo menos 3 pontos.
 
-**Exemplo:** "Tenho 62 anos, pago ônibus?" soma 5 pontos na orientação 2, e a confiança é MÉDIA:
+**Exemplo:** "Tenho 62 anos, pago ônibus?" soma 5 pontos na orientação 2 e fica com confiança MÉDIA:
 
 - +3 pela palavra-chave "62 anos";
 - +1 por "anos" no título;
 - +1 por "onibus" no título.
 
+**Ajustes da equipe, permitidos pelo enunciado desde que explicados:**
+
+1. **Palavras comuns não pontuam no título.** A tupla `PALAVRAS_IGNORADAS_TITULO` lista palavras como "como", "para", "onde", "quero" e "tenho". Elas têm 4 letras ou mais, mas não dizem nada sobre o assunto. Sem esse ajuste, "Como faço para recarregar o Bilhete Único?" empatava entre "tirar o bilhete" e "recarga" só por causa do "como".
+2. **Palavra-chave casa só como palavra inteira.** "tea" (autismo) não casa com "teatro", porque `normalizar()` põe espaço nas pontas.
+3. **`normalizar()` foi reforçada.** Além do dicionário `ACENTOS` do enunciado, ela remove acentos fora da lista e troca emoji e reticências por espaço.
+4. **Idades viraram palavras-chave.** A busca por regras não interpreta números, então "60 anos" a "64 anos" estão na orientação 2 e "65 anos" a "100 anos" na orientação 1. Assim "meu pai tem 68 anos" encontra a resposta certa.
+
+**Acerto medido:** a pasta `tests/` tem uma bateria de 85 perguntas escritas como um cidadão escreveria, sem acento, com gíria e abreviação.
+
+- Num grupo de 28 perguntas escritas depois do ajuste das palavras-chave, e que não foi usado para escolhê-las, o acerto foi de 22 em 28 (79%). As falhas viraram as palavras-chave do item 4.
+- O teste exige pelo menos 90% de acerto na bateria inteira.
+
 ## Regras de atendimento
 
-- **Navegação:** por categorias numeradas, com "0 para voltar" em todas as telas.
-- **Entradas inválidas:** opção fora da faixa, letras, resposta vazia ou s/n inválido nunca encerram o programa. Ctrl+D e Ctrl+C encerram com segurança e salvam o que já foi registrado.
-- **Dados pessoais:** o assistente nunca pede nome, CPF, telefone ou e-mail. Pergunta com 8 ou mais dígitos ou com @ é recusada e não é registrada.
+- **Navegação:** por categorias numeradas, com "0 para voltar" em todas as telas, inclusive na pergunta "ajudou? (s/n)".
+- **Entradas inválidas:** opção fora da faixa, letras, resposta vazia, s/n inválido ou caracteres como "²" nunca encerram o programa. Ctrl+D e Ctrl+C encerram com segurança e salvam o atendimento em andamento.
+- **Dados pessoais:** o assistente nunca pede nome, CPF, telefone ou e-mail. Pergunta com 8 ou mais dígitos ou com @ é recusada e não é registrada. Como reforço, também recusa frases como "meu nome é", "me chamo" e "moro na rua".
 - **Transparência:** toda resposta mostra a fonte, a data de verificação e o aviso de que o assistente não é canal oficial.
-- **Arquivos:** JSON da base ausente ou corrompido não trava o programa. Registros com campo faltando são ignorados com aviso.
+- **Arquivos:** base ausente, corrompida ou fora de UTF-8 não trava o programa. Histórico corrompido é guardado com outro nome (`historico.json.corrompido-...`) em vez de ser apagado.
 
 ## Histórico, indicadores e CSV
 
-Cada atendimento é salvo em `data/historico.json` com estes campos:
+Cada atendimento é salvo em `data/historico.json` com os campos:
 
 - `data`;
 - `sessao`;
@@ -122,47 +126,59 @@ Cada atendimento é salvo em `data/historico.json` com estes campos:
 - `pergunta`;
 - `id_orientacao`;
 - `encontrou`;
-- `ajudou`;
+- `ajudou` (sim, não ou não respondeu);
 - `tentativas`;
-- `tempo_s`, medido com `time.time()`;
-- `nota_facilidade`.
+- `tempo_s` (medido com `time.time()` e `round(..., 1)`);
+- `nota_facilidade`;
+- `perguntas_sem_resultado`, com as formulações que não acharam nada antes da que deu certo.
 
-Ao sair, o assistente pede uma nota de facilidade de 1 a 5 e a grava nos atendimentos daquela sessão.
+Ao sair, o assistente pede uma nota de facilidade de 1 a 5 (0 pula) e grava essa nota nos atendimentos da sessão. Se a sessão não teve nenhum atendimento, a nota não é pedida.
 
-**Indicadores calculados (menu 3):**
+**Indicadores (menu 3):**
 
 - resposta encontrada (%);
-- taxa de acerto, ou seja, ajudou (%);
+- taxa de acerto, ou seja, quanto ajudou (%);
 - tempo médio para encontrar;
 - tentativas por atendimento;
 - facilidade de uso (1 a 5);
-- lista de dúvidas sem solução.
+- lista de dúvidas sem solução;
+- perguntas que não foram entendidas na primeira tentativa, que servem de pista para novas palavras-chave.
 
-A exportação para `data/atendimentos.csv` usa `csv.DictWriter`, pelo menu 4 e automaticamente ao sair.
+A exportação para `data/atendimentos.csv` usa `csv.DictWriter`. Ela roda pelo menu 4 e automaticamente ao sair. O arquivo é gravado em UTF-8 com BOM para os acentos abrirem certos no Excel.
 
 ## Integrações com outras disciplinas
 
-Todas as disciplinas do grupo na GS 2026.2 usam o mesmo tema, mobilidade urbana. Nenhuma integração com código de outra disciplina foi feita neste repositório.
+Todas as disciplinas do grupo na GS 2026.2 usam o mesmo tema, mobilidade urbana. Neste repositório não há integração de código com outra disciplina.
 
 ## Fontes consultadas
 
-Todas foram acessadas em 16/11/2026.
+Todas foram acessadas e conferidas em 16/11/2026.
 
-- SP156, Prefeitura de São Paulo:
-  - pessoa idosa: https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?conteudo=4268
-  - pessoa com deficiência: https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?conteudo=4326
-  - estudante: https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?t=&a=NTgx&conteudo=1325
-  - Bilhete Único Comum: https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?t=&a=Nzc4&conteudo=1322
-  - segunda via: https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?t=749&conteudo=4035
-  - Atende+: https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?conteudo=1333
-  - canais: https://sp156.prefeitura.sp.gov.br/portal/outros-canais-de-atendimento
-- SPTrans:
-  - tarifas: https://www.sptrans.com.br/tarifas/
-  - perguntas e respostas: https://www.sptrans.com.br/perguntas-e-respostas/
-  - recarga: https://www.sptrans.com.br/compra-de-creditos-e-servicos
-  - linhas noturnas: https://www.sptrans.com.br/linhas-noturnas/
-  - ouvidoria: https://www.sptrans.com.br/fale-conosco/ouvidoria-sptrans/
-- Prefeitura de São Paulo, pessoa com deficiência (desembarque fora do ponto): https://prefeitura.sp.gov.br/web/pessoa_com_deficiencia/w/publicacoes/307915
+**SPTrans, perguntas e respostas:**
+
+- Pessoa idosa 65+: https://www.sptrans.com.br/perguntas-e-respostas/?sobre=bilhete-pessoa-idosa
+- 60 a 64 anos: https://www.sptrans.com.br/perguntas-e-respostas/?sobre=gratuidade-60-64
+- Pessoa com deficiência: https://www.sptrans.com.br/perguntas-e-respostas/?sobre=bilhete-pcd
+- Estudante: https://www.sptrans.com.br/perguntas-e-respostas/?sobre=bilhete-estudante
+- Domingos: https://www.sptrans.com.br/perguntas-e-respostas/?sobre=tarifa-zero
+- Bilhete Único: https://www.sptrans.com.br/perguntas-e-respostas/?sobre=bilhete-unico
+- Atende+: https://www.sptrans.com.br/perguntas-e-respostas/?sobre=atende
+
+**SPTrans, outras páginas:**
+
+- Tarifas: https://www.sptrans.com.br/tarifas/
+- Recarga: https://www.sptrans.com.br/compra-de-creditos-e-servicos
+- Linhas noturnas: https://www.sptrans.com.br/linhas-noturnas/
+- Ouvidoria: https://www.sptrans.com.br/fale-conosco/ouvidoria-sptrans/
+
+**SP156, Prefeitura de São Paulo:**
+
+- Bilhete Especial PcD: https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?conteudo=4326
+- Gratuidade estudante: https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?t=&a=NTgx&conteudo=1325
+- Bilhete Único Comum: https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?t=&a=Nzc4&conteudo=1322
+- Canais: https://sp156.prefeitura.sp.gov.br/portal/outros-canais-de-atendimento
+
+**Prefeitura de São Paulo, pessoa com deficiência** (Lei 15.914/2013, desembarque fora do ponto): https://prefeitura.sp.gov.br/web/pessoa_com_deficiencia/w/publicacoes/307915
 
 ## Teste com usuários
 
@@ -170,11 +186,13 @@ Todas foram acessadas em 16/11/2026.
 
 ## Limitações
 
-- Cobre só o ônibus municipal da cidade de São Paulo. Metrô, trem e ônibus intermunicipal aparecem apenas na integração tarifária.
-- As regras e os valores mudam: cada orientação mostra a data em que foi conferida, e a pessoa deve confirmar no canal oficial.
-- A busca é por palavras-chave. Perguntas com palavras que não estão na base podem não ser encontradas, e as categorias são a alternativa.
-- Não consulta horários nem posição dos ônibus em tempo real.
+- **Escopo:** cobre só o ônibus municipal da cidade de São Paulo. Metrô e trem aparecem apenas na integração tarifária.
+- **Regras mudam:** cada orientação mostra a data em que foi conferida, e a pessoa deve confirmar no canal oficial.
+- **Palavras exatas:** a busca não tolera erro de digitação. "pasagem" pontua menos que "passagem", e "idozo" não encontra nada. A navegação por categorias é a alternativa.
+- **Empates:** em empate de pontos vence o menor `id`, e a resposta certa pode aparecer como alternativa.
+- **Filtro de dados pessoais:** segue a regra de 8 dígitos. Por isso uma data completa ("10/11/2026") é recusada por precaução. Um endereço sem número e sem as frases da lista não é detectado.
+- **Sem tempo real:** não consulta horários nem a posição dos ônibus.
 
 ## Vídeo técnico
 
-*Link será adicionado após a gravação.*
+*O link será adicionado após a gravação.*

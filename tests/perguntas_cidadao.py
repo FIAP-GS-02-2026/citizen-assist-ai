@@ -1,0 +1,49 @@
+"""Perguntas de cidadãos (linguagem coloquial, sem acento, com gíria) e a orientação esperada.
+
+None = fora do escopo: o assistente deve responder "não encontrei".
+AJUSTE: usadas para escolher palavras-chave (o acerto nelas é otimista).
+VALIDACAO: escritas depois e usadas para medir; após medir (22 de 28 = 79%),
+as falhas viraram novas palavras-chave, registradas no README.
+"""
+
+AJUSTE = [
+    ("tenho 70 anos pago onibus?", 1), ("idoso paga onibus?", 1), ("minha mae tem 66 anos, ela paga busao?", 1),
+    ("com quantos anos o idoso nao paga mais", 1), ("como faz o cartao do idoso", 1), ("vó de 80 anos precisa de bilhete?", 1),
+    ("fiz 60 anos agora, ja posso andar de graca no onibus?", 2), ("tenho 63 anos tenho gratuidade", 2), ("quem tem 61 anos paga passagem", 2),
+    ("meu filho e cadeirante, tem passe livre?", 3), ("como tirar bilhete de deficiente", 3),
+    ("tenho deficiencia visual, como faço o cartao", 3), ("sou surdo tenho direito a bilhete gratis?", 3),
+    ("posso levar acompanhante no onibus com meu filho pcd", 4), ("meu acompanhante paga?", 4),
+    ("como tirar a carteirinha de estudante do onibus", 5), ("quanto paga estudante no busao", 5), ("meia passagem pra universitario", 5),
+    ("estudante de escola publica paga onibus?", 6),
+    ("onibus e de graca no domingo?", 7), ("domingo paga onibus?", 7), ("no natal o onibus e gratis?", 7),
+    ("qual o preco da passagem", 8), ("qto ta a passagem de onibus", 8), ("quanto custa o busao", 8),
+    ("quanto e a integraçao com o metro", 8), ("valor da tarifa do onibus em sp", 8),
+    ("tem bilhete mensal?", 9), ("bilhete de 24 horas quanto custa", 9),
+    ("como faço pra tirar o bilhete unico", 10), ("onde faço o bilhete unico", 10), ("quero fazer meu bilhete", 10), ("como fazer o cartao do onibus", 10),
+    ("como recarregar o bilhete", 11), ("onde coloco credito no bilhete unico", 11), ("como por saldo no cartao", 11), ("da pra recarregar pelo celular?", 11),
+    ("perdi meu bilhete unico", 12), ("roubaram meu cartao", 12), ("como tirar segunda via do bilhete", 12), ("furtaram minha carteira com o bilhete", 12),
+    ("transporte pra cadeirante que nao consegue pegar onibus", 13), ("atende mais como pedir", 13),
+    ("posso descer fora do ponto?", 14),
+    ("o motorista nao parou no ponto, como reclamo", 15), ("onibus atrasado demais onde reclamar", 15),
+    ("onibus sempre lotado quero reclamar", 15), ("o motorista foi grosso comigo", 15),
+    ("reclamei no 156 e nada aconteceu", 16), ("minha reclamacao nao foi resolvida", 16),
+    ("tem onibus de madrugada?", 17), ("onibus que roda a noite toda", 17), ("que horas o onibus para de rodar", 17),
+    ("onibus tem wifi?", None), ("cade o onibus agora", None), ("como chego na paulista", None),
+    ("onde e o banco preferencial no onibus", None), ("qual a previsão do tempo amanhã", None),
+]
+
+VALIDACAO = [
+    ("meu pai tem 68 anos, ele precisa pagar o busão?", 1), ("idosa paga metrô?", 1), ("como pede o bilhete especial do idoso", 1),
+    ("minha tia fez 61, ela anda de graça?", 2), ("pessoa de 64 anos precisa de cartão?", 2),
+    ("tenho autismo, posso ter bilhete grátis?", 3), ("criança com deficiência tem passe?", 3),
+    ("meu filho cadeirante pode levar acompanhante?", 4), ("universitário paga quanto no ônibus?", 5),
+    ("como pedir o bilhete de estudante", 5), ("aluno de escola pública tem passe livre?", 6),
+    ("domingo o busão é de graça mesmo?", 7), ("quanto tá a tarifa do ônibus hoje", 8),
+    ("quanto custa pegar ônibus e metrô junto", 8), ("quanto custa o bilhete mensal", 9),
+    ("onde eu tiro o bilhete único", 10), ("preciso de um bilhete único novo, como faço", 10),
+    ("como coloco crédito pelo app", 11), ("meu bilhete foi roubado o que eu faço", 12), ("perdi o cartão do ônibus", 12),
+    ("minha mãe não consegue andar, tem transporte especial?", 13), ("o motorista me deixa descer fora do ponto?", 14),
+    ("onde reclamo do motorista", 15), ("o ônibus nunca passa, quero reclamar", 15),
+    ("ninguém resolveu minha reclamação do 156", 16), ("tem ônibus depois da meia noite?", 17),
+    ("me passa uma receita de bolo", None),
+]

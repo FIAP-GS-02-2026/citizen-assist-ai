@@ -7,7 +7,17 @@ CAMPOS_OBRIGATORIOS = (
     "documentos", "onde", "fonte", "verificado_em",
 )
 
+# Campos que precisam ser texto não vazio.
+CAMPOS_TEXTO = ("categoria", "titulo", "resposta", "onde", "fonte", "verificado_em")
+
 AVISO = "Aviso: este assistente NÃO é um canal oficial. Confirme no canal oficial antes de agir."
+
+
+def _lista_de_textos(valor, pode_ser_vazia):
+    """True se o valor é uma lista só com textos não vazios."""
+    if not isinstance(valor, list) or (not valor and not pode_ser_vazia):
+        return False
+    return all(isinstance(item, str) and item.strip() for item in valor)
 
 
 class Orientacao:
@@ -27,15 +37,26 @@ class Orientacao:
 
     @classmethod
     def de_dicionario(cls, dados):
-        """Cria uma Orientacao a partir de um dicionário do JSON.
+        """Cria uma Orientacao a partir de um dicionário do JSON, validando campos e tipos.
 
-        Levanta ValueError se faltar algum campo obrigatório ou se o tipo estiver errado.
+        Levanta ValueError se faltar campo ou se algum tipo estiver errado,
+        para que um registro ruim seja ignorado em vez de derrubar o programa.
         """
+        if not isinstance(dados, dict):
+            raise ValueError("o registro não é um dicionário")
         faltando = [campo for campo in CAMPOS_OBRIGATORIOS if campo not in dados]
         if faltando:
             raise ValueError("campos ausentes: " + ", ".join(faltando))
-        if not isinstance(dados["palavras_chave"], list) or not isinstance(dados["documentos"], list):
-            raise ValueError("palavras_chave e documentos precisam ser listas")
+        # bool é subclasse de int em Python, por isso a checagem extra.
+        if not isinstance(dados["id"], int) or isinstance(dados["id"], bool):
+            raise ValueError("id precisa ser um número inteiro")
+        for campo in CAMPOS_TEXTO:
+            if not isinstance(dados[campo], str) or not dados[campo].strip():
+                raise ValueError(f"{campo} precisa ser um texto não vazio")
+        if not _lista_de_textos(dados["palavras_chave"], pode_ser_vazia=False):
+            raise ValueError("palavras_chave precisa ser uma lista de textos")
+        if not _lista_de_textos(dados["documentos"], pode_ser_vazia=True):
+            raise ValueError("documentos precisa ser uma lista de textos")
         return cls(**{campo: dados[campo] for campo in CAMPOS_OBRIGATORIOS})
 
     def exibir(self):
