@@ -1,0 +1,371 @@
+[
+  {
+    "id": 1,
+    "categoria": "Gratuidades",
+    "titulo": "Gratuidade no ônibus para pessoa idosa com 65 anos ou mais",
+    "palavras_chave": [
+      "65 anos",
+      "idoso",
+      "idosa",
+      "terceira idade",
+      "aposentado",
+      "bilhete idoso",
+      "cartao idoso"
+    ],
+    "resposta": "Quem tem 65 anos ou mais não paga ônibus municipal. Pode embarcar mostrando um documento com foto ao motorista ou cobrador e descer pela porta da frente. Para passar na catraca, peça o Bilhete Único Especial da Pessoa Idosa, que é gratuito e chega em até 20 dias úteis depois de aprovado.",
+    "documentos": [
+      "Documento oficial com foto (RG, CIN ou CNH)",
+      "CPF, se não estiver no documento",
+      "Comprovante de residência recente",
+      "Foto 3x4 ou selfie com fundo claro"
+    ],
+    "onde": "Site de Atendimento SPTrans (opção Pessoa Idosa - 1ª via 65+) ou Posto SPTrans com agendamento",
+    "fonte": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?conteudo=4268",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 2,
+    "categoria": "Gratuidades",
+    "titulo": "Gratuidade no ônibus para pessoa idosa de 60 a 64 anos",
+    "palavras_chave": [
+      "60 anos",
+      "61 anos",
+      "62 anos",
+      "63 anos",
+      "64 anos",
+      "sessenta anos",
+      "idoso 60",
+      "gratuidade 60"
+    ],
+    "resposta": "De 60 a 64 anos também não paga ônibus municipal, mas não existe cartão de idoso para essa idade: a gratuidade fica no seu Bilhete Único Comum cadastrado. Todo início de mês, encoste o cartão duas vezes numa máquina de recarga (uma para ônibus e outra para metrô e trem). Sem cartão, embarque mostrando documento com foto e entre pela porta da frente. Atenção: muitos sites antigos ainda dizem que a gratuidade é só a partir dos 65 anos, o que está desatualizado.",
+    "documentos": [
+      "Bilhete Único Comum cadastrado no seu nome",
+      "Documento oficial com foto"
+    ],
+    "onde": "Cadastro em sptrans.com.br/cadastro; recarga da cota em qualquer máquina de recarga do Bilhete Único",
+    "fonte": "https://www.sptrans.com.br/perguntas-e-respostas/?sobre=gratuidade-60-64",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 3,
+    "categoria": "Gratuidades",
+    "titulo": "Bilhete Único Especial para pessoa com deficiência",
+    "palavras_chave": [
+      "deficiencia",
+      "deficiente",
+      "pcd",
+      "bilhete especial",
+      "cadeirante",
+      "laudo",
+      "autismo",
+      "cego",
+      "autista"
+    ],
+    "resposta": "Pessoa com deficiência que mora em São Paulo ou na Região Metropolitana pode ter o Bilhete Único Especial, gratuito, inclusive a segunda via. O pedido precisa de um formulário preenchido pelo médico com o CID. A análise leva até 20 dias e o cartão chega em até 20 dias depois de aprovado. Quem tem benefício permanente não precisa renovar.",
+    "documentos": [
+      "Documento com foto e CPF",
+      "Comprovante de residência recente",
+      "Formulário de Solicitação SPTrans preenchido pelo médico (vale 90 dias)",
+      "Exames e laudos exigidos para o CID",
+      "Foto 3x4"
+    ],
+    "onde": "Site de Atendimento SPTrans (Novo atendimento > Pessoa com Deficiência) ou Posto Central, Rua Boa Vista, 274, Mezanino, segunda a sexta, 8h às 17h",
+    "fonte": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?conteudo=4326",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 4,
+    "categoria": "Gratuidades",
+    "titulo": "Acompanhante de pessoa com deficiência no ônibus",
+    "palavras_chave": [
+      "acompanhante",
+      "acompanhar",
+      "levar alguem junto",
+      "responsavel",
+      "cuidador"
+    ],
+    "resposta": "O direito a acompanhante depende do CID informado no laudo. A SPTrans tem uma busca de CID que mostra se o acompanhante é permitido. Quando o cartão dá direito, a catraca gira duas vezes; sem o acompanhante presente, gira só uma.",
+    "documentos": [
+      "Bilhete Único Especial da pessoa com deficiência com direito a acompanhante"
+    ],
+    "onde": "Consulta do CID em sptrans.com.br/busca-cid",
+    "fonte": "https://www.sptrans.com.br/perguntas-e-respostas/?sobre=bilhete-pcd",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 5,
+    "categoria": "Gratuidades",
+    "titulo": "Meia tarifa com o Bilhete Único Estudante",
+    "palavras_chave": [
+      "estudante",
+      "meia tarifa",
+      "meia passagem",
+      "aluno",
+      "faculdade",
+      "escola",
+      "bilhete estudante"
+    ],
+    "resposta": "Estudante de ensino fundamental, médio, técnico ou superior paga meia tarifa no ônibus (R$ 2,65). A escola precisa ficar a pelo menos 1 km de casa. Primeiro a escola envia a matrícula à SPTrans; depois o aluno faz o pedido no site do Bilhete Estudante. A 1ª via custa 7 tarifas (R$ 37,10). Atenção: o prazo de pedido do 2º semestre de 2026 terminou em 14/11/2026.",
+    "documentos": [
+      "Documento com foto",
+      "Comprovante de residência recente",
+      "Matrícula enviada pela escola à SPTrans"
+    ],
+    "onde": "Site sptrans.dne.com.br ou Posto SPTrans",
+    "fonte": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?t=&a=NTgx&conteudo=1325",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 6,
+    "categoria": "Gratuidades",
+    "titulo": "Gratuidade para estudante de baixa renda",
+    "palavras_chave": [
+      "passe livre",
+      "estudante gratis",
+      "estudante gratuito",
+      "cadunico",
+      "prouni",
+      "fies",
+      "baixa renda"
+    ],
+    "resposta": "Alunos de escola pública (fundamental, médio e técnico) e estudantes do superior com renda por pessoa abaixo de 1,5 salário mínimo, ou com ProUni, FIES ou cotas sociais, podem ter gratuidade no Bilhete Único Estudante. É preciso estar no CadÚnico (cadastro feito no CRAS). A SPTrans confirma o pedido em até 45 dias.",
+    "documentos": [
+      "Documento com foto",
+      "Comprovante de inscrição no CadÚnico",
+      "Comprovante de residência recente"
+    ],
+    "onde": "Site de Atendimento SPTrans; inscrição no CadÚnico no CRAS com agendamento",
+    "fonte": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?t=&a=NTgx&conteudo=1325",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 7,
+    "categoria": "Tarifas",
+    "titulo": "Domingão Tarifa Zero: ônibus de graça aos domingos",
+    "palavras_chave": [
+      "domingo",
+      "tarifa zero",
+      "domingao",
+      "gratis domingo",
+      "de graca",
+      "feriado"
+    ],
+    "resposta": "Todo domingo, das 0h às 23h59, os ônibus municipais de São Paulo são gratuitos. Também vale em 25/12, 01/01 e 25/01. Você passa o Bilhete Único e nada é cobrado; sem cartão, o motorista ou cobrador libera a catraca. Não vale para metrô, trem nem ônibus intermunicipal.",
+    "documentos": [],
+    "onde": "Em qualquer ônibus municipal da SPTrans",
+    "fonte": "https://www.sptrans.com.br/perguntas-e-respostas/?sobre=tarifa-zero",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 8,
+    "categoria": "Tarifas",
+    "titulo": "Valor da passagem de ônibus e integração com metrô e trem",
+    "palavras_chave": [
+      "valor",
+      "preco",
+      "quanto custa",
+      "tarifa",
+      "passagem",
+      "integracao",
+      "metro",
+      "trem"
+    ],
+    "resposta": "A passagem de ônibus municipal custa R$ 5,30 desde 06/01/2026. Com o Bilhete Único Comum você pode pegar até 4 ônibus em 3 horas pagando uma vez só. A integração ônibus + metrô ou trem custa R$ 9,38 e permite até 3 ônibus em 3 horas e 1 viagem de metrô ou trem nas 2 primeiras horas.",
+    "documentos": [
+      "Bilhete Único com crédito"
+    ],
+    "onde": "Tabela oficial de tarifas da SPTrans",
+    "fonte": "https://www.sptrans.com.br/tarifas/",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 9,
+    "categoria": "Tarifas",
+    "titulo": "Bilhete Único Mensal e de 24 horas",
+    "palavras_chave": [
+      "mensal",
+      "bilhete mensal",
+      "24 horas",
+      "temporal",
+      "semanal",
+      "ilimitado"
+    ],
+    "resposta": "Para quem anda muito de ônibus existem bilhetes por tempo. O Mensal só ônibus custa R$ 257,53 e dá até 10 embarques por dia durante 31 dias. O de 24 horas só ônibus custa R$ 20,25 e dá até 10 embarques em 24 horas. Há versões com metrô e trem por valores maiores.",
+    "documentos": [
+      "Bilhete Único Comum"
+    ],
+    "onde": "Compra pelas formas oficiais de recarga do Bilhete Único",
+    "fonte": "https://www.sptrans.com.br/tarifas/",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 10,
+    "categoria": "Bilhete Único",
+    "titulo": "Como tirar o Bilhete Único Comum",
+    "palavras_chave": [
+      "tirar bilhete",
+      "fazer bilhete",
+      "bilhete unico",
+      "cartao de onibus",
+      "primeira via",
+      "novo cartao"
+    ],
+    "resposta": "Qualquer pessoa a partir de 6 anos, com RG e CPF próprios, pode tirar o Bilhete Único Comum. Retirando no Posto SPTrans é gratuito e sai na hora. Pedindo pela internet com entrega em casa, paga o frete e recebe em até 10 dias úteis. O cartão vale 5 anos.",
+    "documentos": [
+      "Documento original com foto (RG, CIN ou CNH)",
+      "CPF, se não estiver no documento",
+      "Comprovante de residência com CEP",
+      "Selfie ou foto 3x4 com fundo branco"
+    ],
+    "onde": "Posto SPTrans (os dos terminais abrem todos os dias, 6h às 22h) ou Site de Atendimento SPTrans",
+    "fonte": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?t=&a=Nzc4&conteudo=1322",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 11,
+    "categoria": "Bilhete Único",
+    "titulo": "Como colocar crédito no Bilhete Único (recarga)",
+    "palavras_chave": [
+      "recarga",
+      "recarregar",
+      "colocar credito",
+      "credito",
+      "carregar bilhete",
+      "saldo"
+    ],
+    "resposta": "Você pode recarregar pela loja virtual da SPTrans, por aplicativos e bancos credenciados, pelo WhatsApp de empresas credenciadas, nas máquinas dos terminais, metrô e trem, ou em pontos de venda. Depois de comprar pela internet, encoste o cartão numa máquina para liberar o crédito.",
+    "documentos": [
+      "Número do Bilhete Único"
+    ],
+    "onde": "Loja virtual da SPTrans, aplicativos credenciados ou máquinas de recarga",
+    "fonte": "https://www.sptrans.com.br/compra-de-creditos-e-servicos",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 12,
+    "categoria": "Bilhete Único",
+    "titulo": "Perdi ou roubaram meu Bilhete Único: segunda via",
+    "palavras_chave": [
+      "perdi",
+      "perdeu",
+      "roubado",
+      "roubaram",
+      "furto",
+      "segunda via",
+      "2 via",
+      "bloquear"
+    ],
+    "resposta": "Cancele o cartão o quanto antes pelo telefone 156, pelo Site de Atendimento SPTrans ou num posto. O cancelamento não pode ser desfeito, mesmo se você achar o cartão. O saldo volta em até 72 horas. A segunda via do Bilhete Comum custa 7 tarifas (R$ 37,10) no posto, com retirada na hora. Cartão de idoso 65+ e de pessoa com deficiência tem segunda via gratuita.",
+    "documentos": [
+      "Documento com foto",
+      "Comprovante de residência",
+      "Foto"
+    ],
+    "onde": "Central 156, Site de Atendimento SPTrans ou Posto SPTrans",
+    "fonte": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?t=749&conteudo=4035",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 13,
+    "categoria": "Acessibilidade",
+    "titulo": "Atende+: transporte porta a porta para pessoa com deficiência",
+    "palavras_chave": [
+      "atende",
+      "porta a porta",
+      "van",
+      "mobilidade reduzida",
+      "nao consigo pegar onibus",
+      "transporte especial",
+      "autista",
+      "tea"
+    ],
+    "resposta": "O Atende+ é um transporte gratuito porta a porta dentro da cidade de São Paulo para pessoas com deficiência física e mobilidade muito reduzida, autismo ou surdocegueira que não conseguem usar o ônibus comum. Funciona das 7h às 20h, todos os dias menos feriados, e depende de vaga nas rotas. A resposta ao pedido sai em até 30 dias.",
+    "documentos": [
+      "CPF e RG (ou certidão de nascimento para menor)",
+      "Comprovante de endereço com CEP",
+      "Ficha de Avaliação Médica preenchida e assinada pelo médico"
+    ],
+    "onde": "Site do Atende+, Posto SPTrans ou Descomplica SP com agendamento",
+    "fonte": "https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?conteudo=1333",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 14,
+    "categoria": "Acessibilidade",
+    "titulo": "Descer do ônibus fora do ponto e assento reservado",
+    "palavras_chave": [
+      "descer fora do ponto",
+      "fora do ponto",
+      "assento reservado",
+      "lugar reservado",
+      "gestante",
+      "parar perto de casa"
+    ],
+    "resposta": "Pessoa com deficiência ou mobilidade reduzida pode pedir para descer entre um ponto e outro, menos nos corredores exclusivos de ônibus. Além disso, a lei reserva 10% dos assentos para pessoas idosas.",
+    "documentos": [],
+    "onde": "Peça ao motorista no ônibus",
+    "fonte": "https://prefeitura.sp.gov.br/web/pessoa_com_deficiencia/w/publicacoes/307915",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 15,
+    "categoria": "Atendimento e reclamação",
+    "titulo": "Como reclamar do ônibus (SP156)",
+    "palavras_chave": [
+      "reclamar",
+      "reclamacao",
+      "denunciar",
+      "lotado",
+      "superlotacao",
+      "demora",
+      "motorista",
+      "156"
+    ],
+    "resposta": "Reclamações sobre ônibus lotado, demora, direção perigosa ou problema na recarga são feitas no SP156: telefone 156 (24 horas), WhatsApp (11) 3230-5156, aplicativo SP156 ou site. Anote o número do protocolo: ele é o mesmo em qualquer canal.",
+    "documentos": [
+      "Linha, horário e local do problema"
+    ],
+    "onde": "Telefone 156, WhatsApp (11) 3230-5156, app SP156 ou sp156.prefeitura.sp.gov.br",
+    "fonte": "https://sp156.prefeitura.sp.gov.br/portal/outros-canais-de-atendimento",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 16,
+    "categoria": "Atendimento e reclamação",
+    "titulo": "Ouvidoria da SPTrans quando o SP156 não resolveu",
+    "palavras_chave": [
+      "ouvidoria",
+      "nao resolveram",
+      "nao resolveu",
+      "protocolo",
+      "sem resposta"
+    ],
+    "resposta": "Se a sua reclamação no SP156 não foi resolvida no prazo ou foi mal atendida, procure a Ouvidoria da SPTrans com o número do protocolo. A resposta sai em até 30 dias, que podem ser prorrogados por mais 30.",
+    "documentos": [
+      "Número do protocolo do SP156"
+    ],
+    "onde": "Ouvidoria SPTrans: Rua Boa Vista, 236, 1º andar, A/C Ouvidoria",
+    "fonte": "https://www.sptrans.com.br/fale-conosco/ouvidoria-sptrans/",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 17,
+    "categoria": "Linhas e horários",
+    "titulo": "Ônibus de madrugada: Rede Noturno",
+    "palavras_chave": [
+      "madrugada",
+      "noturno",
+      "de noite",
+      "meia noite",
+      "noite",
+      "tarde da noite"
+    ],
+    "resposta": "Da 0h às 4h funciona a Rede Noturno, com linhas em todas as regiões da cidade. Toda linha passa por pelo menos um terminal, e a troca de ônibus é feita de preferência nos terminais.",
+    "documentos": [
+      "Bilhete Único com crédito"
+    ],
+    "onde": "Consulte as linhas noturnas no site da SPTrans",
+    "fonte": "https://www.sptrans.com.br/linhas-noturnas/",
+    "verificado_em": "2026-11-16"
+  }
+]
