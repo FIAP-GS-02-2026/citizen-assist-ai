@@ -23,7 +23,7 @@ Global Solution 2026.2 · FIAP · Ciência da Computação 1CCR · Pensamento Co
 
 **Problema:** a informação sobre direitos e serviços do transporte existe, mas está espalhada entre SP156, SPTrans e Prefeitura, e há regras antigas circulando. Exemplos:
 
-- muitos sites ainda dizem que a gratuidade do idoso começa aos 65 anos, mas desde 2023 vale a partir dos 60;
+- muitos sites ainda dizem que a gratuidade do idoso começa aos 65 anos, mas o Decreto Municipal 62.057/2022 estendeu a gratuidade a partir dos 60;
 - pouca gente sabe que o ônibus é de graça aos domingos.
 
 O assistente junta essas orientações num só lugar, em linguagem simples e com a fonte.

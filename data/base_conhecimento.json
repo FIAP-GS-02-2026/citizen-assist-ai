@@ -37,7 +37,7 @@
       "idoso 60",
       "gratuidade 60"
     ],
-    "resposta": "De 60 a 64 anos também não paga ônibus municipal, mas não existe cartão de idoso para essa idade: a gratuidade fica no seu Bilhete Único Comum cadastrado. Todo início de mês, encoste o cartão duas vezes numa máquina de recarga (uma para ônibus e outra para metrô e trem). Sem cartão, embarque mostrando documento com foto e entre pela porta da frente. Atenção: muitos sites antigos ainda dizem que a gratuidade é só a partir dos 65 anos, o que está desatualizado.",
+    "resposta": "De 60 a 64 anos também não paga ônibus municipal, mas não existe cartão de idoso para essa idade: a gratuidade fica no seu Bilhete Único Comum cadastrado. Todo início de mês, encoste o cartão duas vezes numa máquina de recarga (uma para ônibus e outra para metrô e trem). Sem cartão, também vale mostrar um documento oficial com foto que comprove a idade e desembarcar pela porta da frente (Decreto Municipal 62.057/2022). Atenção: muitos sites antigos ainda dizem que a gratuidade é só a partir dos 65 anos, o que está desatualizado.",
     "documentos": [
       "Bilhete Único Comum cadastrado no seu nome",
       "Documento oficial com foto"
@@ -150,7 +150,7 @@
       "de graca",
       "feriado"
     ],
-    "resposta": "Todo domingo, das 0h às 23h59, os ônibus municipais de São Paulo são gratuitos. Também vale em 25/12, 01/01 e 25/01. Você passa o Bilhete Único e nada é cobrado; sem cartão, o motorista ou cobrador libera a catraca. Não vale para metrô, trem nem ônibus intermunicipal.",
+    "resposta": "Todo domingo, das 0h às 23h59, os ônibus municipais de São Paulo são gratuitos. Também vale em 25/12, 01/01 e 25/01. Você passa o Bilhete Único e nada é cobrado; sem cartão, o motorista ou cobrador libera a catraca. Vale só para os ônibus municipais da cidade de São Paulo.",
     "documentos": [],
     "onde": "Em qualquer ônibus municipal da SPTrans",
     "fonte": "https://www.sptrans.com.br/perguntas-e-respostas/?sobre=tarifa-zero",
