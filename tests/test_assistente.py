@@ -63,7 +63,8 @@ class TestBaseReal(unittest.TestCase):
             self.assertRegex(registro["verificado_em"], r"^\d{4}-\d{2}-\d{2}$")
 
     def test_fontes_oficiais(self):
-        oficiais = ("sptrans.com.br", "prefeitura.sp.gov.br", "gov.br", "planalto.gov.br")
+        # enel.com.br: a distribuidora concessionária publica a tarifa homologada pela ANEEL.
+        oficiais = ("sptrans.com.br", "prefeitura.sp.gov.br", "gov.br", "planalto.gov.br", "enel.com.br")
         for registro in self.dados:
             self.assertTrue(any(d in registro["fonte"] for d in oficiais), registro["fonte"])
 

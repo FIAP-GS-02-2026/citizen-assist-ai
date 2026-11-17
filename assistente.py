@@ -105,7 +105,7 @@ class Assistente:
         self.historico = self._carregar_historico()
 
     def saudacao(self):
-        print(f"Olá! Eu sou o {self.nome}. Oriento sobre ônibus na cidade de São Paulo.")
+        print(f"Olá! Eu sou o {self.nome}. Oriento sobre ônibus na cidade de São Paulo e sobre bicicleta e patinete elétrico.")
         print("Não digite nome, CPF, telefone ou e-mail: eu não preciso desses dados.")
 
     # ---------- persistência ----------

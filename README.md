@@ -1,6 +1,6 @@
 # Citizen Assist AI Mobilidade
 
-Assistente no terminal que orienta quem usa ônibus na cidade de São Paulo sobre gratuidades, Bilhete Único, tarifas, acessibilidade e onde reclamar. Ele responde só com informações de fontes oficiais, mostra a fonte e a data em que ela foi conferida e avisa que não é um canal oficial.
+Assistente no terminal que orienta quem usa ônibus na cidade de São Paulo sobre gratuidades, Bilhete Único, tarifas, acessibilidade e onde reclamar, e quem usa bicicleta ou patinete elétrico sobre recarga, energia solar e regras de circulação. Ele responde só com informações de fontes oficiais, mostra a fonte e a data em que ela foi conferida e avisa que não é um canal oficial.
 
 Global Solution 2026.2 · FIAP · Ciência da Computação 1CCR · Pensamento Computacional e Automação com Python.
 
@@ -65,8 +65,8 @@ Assistente
 
 O arquivo `data/base_conhecimento.json` é uma lista de dicionários, um por orientação. Cada registro tem os campos `id`, `categoria`, `titulo`, `palavras_chave`, `resposta`, `documentos`, `onde`, `fonte` e `verificado_em`.
 
-- São 17 orientações em 6 categorias: Gratuidades, Tarifas, Bilhete Único, Acessibilidade, Atendimento e reclamação, Linhas e horários.
-- Em 16/11/2026, a equipe abriu cada página oficial citada e conferiu, frase a frase, se a resposta estava escrita nela. O que não estava foi retirado.
+- São 22 orientações em 7 categorias: Gratuidades, Tarifas, Bilhete Único, Acessibilidade, Atendimento e reclamação, Linhas e horários, Energia e mobilidade elétrica.
+- Em 16/11/2026 (orientações 1 a 17) e 17/11/2026 (18 a 22), a equipe abriu cada página oficial citada e conferiu, frase a frase, se a resposta estava escrita nela. O que não estava foi retirado.
 - Ao carregar, o programa valida os tipos de cada registro. Registro incompleto, com tipo errado ou com `id` repetido é ignorado com aviso.
 
 **Uso de dicionários e tuplas:**
@@ -103,9 +103,10 @@ A pergunta, as palavras-chave e o título são comparados sem acentos, sem pontu
 3. **`normalizar()` foi reforçada.** Além do dicionário `ACENTOS` do enunciado, ela remove acentos fora da lista e troca emoji e reticências por espaço.
 4. **Idades viraram palavras-chave.** A busca por regras não interpreta números, então "60 anos" a "64 anos" estão na orientação 2 e "65 anos" a "100 anos" na orientação 1. Assim "meu pai tem 68 anos" encontra a resposta certa.
 
-**Acerto medido:** a pasta `tests/` tem uma bateria de 85 perguntas escritas como um cidadão escreveria, sem acento, com gíria e abreviação.
+**Acerto medido:** a pasta `tests/` tem uma bateria de 109 perguntas escritas como um cidadão escreveria, sem acento, com gíria e abreviação.
 
 - Num grupo de 28 perguntas escritas depois do ajuste das palavras-chave, e que não foi usado para escolhê-las, o acerto foi de 22 em 28 (79%). As falhas viraram as palavras-chave do item 4.
+- Na categoria de energia, 10 perguntas novas, escritas depois do ajuste, acertaram 8 (80%). As 2 falhas ("carregando" e "tirar carteira") viraram palavras-chave.
 - O teste exige pelo menos 90% de acerto na bateria inteira.
 
 ## Regras de atendimento
@@ -148,11 +149,13 @@ A exportação para `data/atendimentos.csv` usa `csv.DictWriter`. Ela roda pelo 
 
 ## Integrações com outras disciplinas
 
-Todas as disciplinas do grupo na GS 2026.2 usam o mesmo tema, mobilidade urbana. Neste repositório não há integração de código com outra disciplina.
+Todas as disciplinas do grupo na GS 2026.2 usam o mesmo tema, mobilidade urbana.
+
+**Soluções em Energias Renováveis e Sustentáveis:** a categoria "Energia e mobilidade elétrica" (orientações 18 a 22) é a contribuição dessa disciplina dentro do assistente. Ela responde quanto custa carregar bicicleta ou patinete elétrico na tomada, o que muda com a bandeira tarifária, como funcionam os créditos de energia solar em casa e as regras de circulação desses veículos. A análise que compara as alternativas de recarga fica na entrega própria da disciplina.
 
 ## Fontes consultadas
 
-Todas foram acessadas e conferidas em 16/11/2026.
+As fontes das orientações 1 a 17 foram acessadas e conferidas em 16/11/2026, e as de energia em 17/11/2026.
 
 **SPTrans, perguntas e respostas:**
 
@@ -180,13 +183,22 @@ Todas foram acessadas e conferidas em 16/11/2026.
 
 **Prefeitura de São Paulo, pessoa com deficiência** (Lei 15.914/2013, desembarque fora do ponto): https://prefeitura.sp.gov.br/web/pessoa_com_deficiencia/w/publicacoes/307915
 
+**Energia e mobilidade elétrica:**
+
+- Tarifa residencial B1 da Enel SP (Resolução Homologatória ANEEL 3.596/2026): https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-energia-eletrica.html
+- Bandeiras tarifárias, ANEEL: https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias
+- Lei 14.300/2022, micro e minigeração distribuída: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm
+- Resolução Contran 996/2023, bicicleta elétrica e autopropelidos: https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9962023.pdf/@@display-file/file
+- Prefeitura de SP, velocidade em ciclovias e calçadas: https://prefeitura.sp.gov.br/w/prefeitura-limita-velocidade-de-bicicletas-el%C3%A9tricas-e-patinetes-a-20-km/h-em-ciclovias
+
 ## Teste com usuários
 
 *Em andamento: esta seção será preenchida com os resultados reais do teste. A meta é de pelo menos 3 pessoas de fora da equipe e 10 atendimentos.*
 
 ## Limitações
 
-- **Escopo:** cobre só o ônibus municipal da cidade de São Paulo. Metrô e trem aparecem apenas na integração tarifária.
+- **Escopo:** cobre o ônibus municipal da cidade de São Paulo e, na categoria de energia, bicicleta e patinete elétrico. Metrô e trem aparecem apenas na integração tarifária.
+- **Tarifa de energia:** a orientação 18 mostra a tarifa da tabela da Enel; a página não diz se ela inclui impostos, então o valor final é o da conta de luz.
 - **Regras mudam:** cada orientação mostra a data em que foi conferida, e a pessoa deve confirmar no canal oficial.
 - **Palavras exatas:** a busca não tolera erro de digitação. "pasagem" pontua menos que "passagem", e "idozo" não encontra nada. A navegação por categorias é a alternativa.
 - **Empates:** em empate de pontos vence o menor `id`, e a resposta certa pode aparecer como alternativa.

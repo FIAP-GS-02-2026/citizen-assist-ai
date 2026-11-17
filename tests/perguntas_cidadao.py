@@ -30,6 +30,14 @@ AJUSTE = [
     ("tem onibus de madrugada?", 17), ("onibus que roda a noite toda", 17), ("que horas o onibus para de rodar", 17),
     ("onibus tem wifi?", None), ("cade o onibus agora", None), ("como chego na paulista", None),
     ("onde e o banco preferencial no onibus", None), ("qual a previsão do tempo amanhã", None),
+    # Energia e mobilidade elétrica (17/11/2026)
+    ("quanto custa carregar bike eletrica na tomada", 18), ("carregar patinete eletrico pesa na conta de luz?", 18),
+    ("qual o valor do kwh da enel", 18), ("o que é bandeira vermelha na conta de luz", 19), ("bandeira amarela aumenta quanto", 19),
+    ("placa solar em casa gera credito na conta de luz?", 20), ("como funciona energia solar", 20),
+    ("vale a pena painel solar pra carregar bike eletrica", 20), ("bike eletrica precisa de cnh e placa?", 21),
+    ("patinete eletrico precisa de habilitacao", 21), ("preciso emplacar minha bicicleta eletrica?", 21),
+    ("patinete eletrico pode andar na calcada", 22), ("qual a velocidade maxima na ciclovia", 22),
+    ("bike eletrica pode andar na ciclofaixa?", 22),
 ]
 
 VALIDACAO = [
@@ -46,4 +54,10 @@ VALIDACAO = [
     ("onde reclamo do motorista", 15), ("o ônibus nunca passa, quero reclamar", 15),
     ("ninguém resolveu minha reclamação do 156", 16), ("tem ônibus depois da meia noite?", 17),
     ("me passa uma receita de bolo", None),
+    # Energia (17/11/2026): escritas depois do ajuste; acerto medido 8 de 10 (80%), as 2 falhas viraram palavras-chave.
+    ("gasto muito de energia carregando minha bike eletrica todo dia?", 18), ("quanto ta o kwh em sao paulo", 18),
+    ("mes de bandeira vermelha a conta sobe quanto", 19), ("o que significa bandeira verde", 19),
+    ("quero colocar painel solar no telhado, sobra energia vira credito?", 20), ("energia solar compensa na conta da enel", 20),
+    ("patinete eletrico tem que emplacar?", 21), ("precisa tirar carteira pra andar de bike eletrica", 21),
+    ("posso andar de patinete na calçada?", 22), ("qual o limite de velocidade da bicicleta eletrica na ciclofaixa", 22),
 ]

@@ -457,5 +457,128 @@
     "onde": "Consulte as linhas noturnas no site da SPTrans",
     "fonte": "https://www.sptrans.com.br/linhas-noturnas/",
     "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 18,
+    "categoria": "Energia e mobilidade elétrica",
+    "titulo": "Quanto custa carregar bike ou patinete elétrico na tomada",
+    "palavras_chave": [
+      "kwh",
+      "enel",
+      "quanto custa carregar",
+      "custo da recarga",
+      "carregar na tomada",
+      "carregar a bateria",
+      "pesa na conta",
+      "gasta de luz",
+      "gasta energia",
+      "valor do kwh",
+      "tarifa de energia",
+      "tarifa da enel",
+      "tarifa de luz",
+      "carregando",
+      "gasto de energia"
+    ],
+    "resposta": "A tarifa residencial (B1) da Enel SP vale desde 04/07/2026, pela Resolução Homologatória ANEEL nº 3.596/2026. Ela tem duas partes: TUSD de R$ 472,42 por MWh e TE de R$ 316,96 por MWh (1 MWh = 1.000 kWh). Para estimar o custo, multiplique os kWh que a bateria consome na recarga pela soma das duas partes.",
+    "documentos": [],
+    "onde": "Tabela de tarifas no site da Enel SP; o valor final aparece na sua conta de luz",
+    "fonte": "https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-energia-eletrica.html",
+    "verificado_em": "2026-11-17"
+  },
+  {
+    "id": 19,
+    "categoria": "Energia e mobilidade elétrica",
+    "titulo": "Bandeira tarifária: quando o kWh fica mais caro",
+    "palavras_chave": [
+      "bandeira",
+      "bandeira tarifaria",
+      "bandeira vermelha",
+      "bandeira amarela",
+      "bandeira verde",
+      "acrescimo",
+      "conta de luz mais cara",
+      "luz mais cara"
+    ],
+    "resposta": "As bandeiras tarifárias mostram o custo real de gerar energia, e a cor é definida todo mês. Na bandeira verde não há acréscimo. Na amarela, o acréscimo é de R$ 0,01885 por kWh; na vermelha, de R$ 0,04463 (patamar 1) ou R$ 0,07877 (patamar 2) por kWh.",
+    "documentos": [],
+    "onde": "Site da ANEEL; a bandeira do mês aparece na conta de luz",
+    "fonte": "https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias",
+    "verificado_em": "2026-11-17"
+  },
+  {
+    "id": 20,
+    "categoria": "Energia e mobilidade elétrica",
+    "titulo": "Energia solar em casa: créditos na conta de luz",
+    "palavras_chave": [
+      "solar",
+      "placa solar",
+      "painel solar",
+      "energia solar",
+      "credito de energia",
+      "microgeracao",
+      "geracao distribuida",
+      "compensacao",
+      "14300",
+      "14 300",
+      "creditos de energia",
+      "credito na conta de luz"
+    ],
+    "resposta": "Placas solares em casa de até 75 kW são microgeração distribuída e entram no Sistema de Compensação de Energia Elétrica. A energia que você manda para a rede da distribuidora é descontada do seu consumo ou vira crédito de energia. Os créditos expiram 60 meses depois da conta em que foram gerados.",
+    "documentos": [
+      "Formulário-padrão da ANEEL para solicitação de acesso, com os documentos que ele indica"
+    ],
+    "onde": "Pedido de acesso na distribuidora (Enel SP, na cidade de São Paulo)",
+    "fonte": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm",
+    "verificado_em": "2026-11-17"
+  },
+  {
+    "id": 21,
+    "categoria": "Energia e mobilidade elétrica",
+    "titulo": "Bicicleta elétrica e patinete: precisa de placa ou CNH?",
+    "palavras_chave": [
+      "emplacar",
+      "emplacamento",
+      "cnh",
+      "habilitacao",
+      "licenciamento",
+      "documento da bike",
+      "documento do patinete",
+      "1000 w",
+      "pedal assistido",
+      "acelerador",
+      "precisa de placa",
+      "tem placa",
+      "placa na bike",
+      "placa no patinete",
+      "registro da bike",
+      "tirar carteira",
+      "carteira de motorista"
+    ],
+    "resposta": "Bicicleta elétrica e patinete elétrico (autopropelido) não precisam de registro, licenciamento nem placa. Para ser bicicleta elétrica, o motor tem até 1000 W, só funciona quando a pessoa pedala, não pode ter acelerador e ajuda até 32 km/h. Ela precisa ter indicador ou limitador de velocidade, campainha, sinalização noturna (inclusive nos pedais), retrovisor esquerdo e pneus em boas condições.",
+    "documentos": [],
+    "onde": "Resolução Contran 996/2023, no site do Ministério dos Transportes",
+    "fonte": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9962023.pdf/@@display-file/file",
+    "verificado_em": "2026-11-17"
+  },
+  {
+    "id": 22,
+    "categoria": "Energia e mobilidade elétrica",
+    "titulo": "Velocidade de bike elétrica e patinete na ciclovia e na calçada",
+    "palavras_chave": [
+      "ciclovia",
+      "ciclofaixa",
+      "calcada",
+      "velocidade",
+      "km h",
+      "20 km",
+      "limite de velocidade",
+      "andar na calcada",
+      "patinete na calcada"
+    ],
+    "resposta": "Em São Paulo, bicicletas elétricas, patinetes e outros autopropelidos podem andar a até 20 km/h nas ciclovias e ciclofaixas não compartilhadas com pedestres. Patinetes e outros autopropelidos são proibidos em calçadas e em espaços compartilhados com pedestres. A bicicleta elétrica pode usar esses espaços a até 6 km/h.",
+    "documentos": [],
+    "onde": "Regras de circulação da Prefeitura de São Paulo (Secretaria de Mobilidade e Trânsito)",
+    "fonte": "https://prefeitura.sp.gov.br/w/prefeitura-limita-velocidade-de-bicicletas-el%C3%A9tricas-e-patinetes-a-20-km/h-em-ciclovias",
+    "verificado_em": "2026-11-17"
   }
 ]
