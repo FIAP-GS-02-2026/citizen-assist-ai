@@ -1,4 +1,4 @@
-"""Citizen Assist AI Mobilidade: assistente de orientação sobre ônibus em São Paulo.
+"""Citizen Assist AI Mobilidade: assistente de orientação sobre ônibus em São Paulo e sobre bicicleta e patinete elétrico.
 
 Execute com: python main.py
 """

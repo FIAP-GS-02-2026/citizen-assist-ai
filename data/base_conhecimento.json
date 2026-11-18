@@ -163,7 +163,8 @@
       "faculdade",
       "bilhete estudante",
       "carteirinha de estudante",
-      "universitario"
+      "universitario",
+      "desconto na passagem"
     ],
     "resposta": "Estudante pode ter o Bilhete Único de Estudante Meia-Tarifa: os créditos custam metade da tarifa. A escola precisa ficar a pelo menos 1 km de casa, com ligação de transporte público entre as duas. Primeiro avise a sua escola que quer usar o bilhete; ela envia a sua matrícula para a SPTrans; depois você faz o pedido. A primeira via é entregue em casa em até 15 dias úteis depois do pagamento. A segunda via custa 7 tarifas de ônibus.",
     "documentos": [
@@ -479,7 +480,7 @@
       "carregando",
       "gasto de energia"
     ],
-    "resposta": "A tarifa residencial (B1) da Enel SP vale desde 04/07/2026, pela Resolução Homologatória ANEEL nº 3.596/2026. Ela tem duas partes: TUSD de R$ 472,42 por MWh e TE de R$ 316,96 por MWh (1 MWh = 1.000 kWh). Para estimar o custo, multiplique os kWh que a bateria consome na recarga pela soma das duas partes.",
+    "resposta": "Na conta de luz de casa (tarifa residencial B1 da Enel SP, válida desde 04/07/2026 pela Resolução ANEEL nº 3.596/2026), o kWh tem duas partes: R$ 472,42 e R$ 316,96 por MWh, ou seja, cerca de R$ 0,47 e R$ 0,32 por kWh (1 MWh = 1.000 kWh). Para saber quanto gasta, multiplique os kWh que o carregador puxa da tomada pela soma das duas partes.",
     "documentos": [],
     "onde": "Tabela de tarifas no site da Enel SP; o valor final aparece na sua conta de luz",
     "fonte": "https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-energia-eletrica.html",
@@ -605,7 +606,7 @@
       "por ano carregando",
       "por mes a recarga"
     ],
-    "resposta": "Pela análise da equipe, uma carga completa custa cerca de R$ 0,59 na bike elétrica (bateria de 630 Wh) e R$ 0,21 no patinete (221 Wh), na tarifa residencial da Enel sem impostos. Rodando 6 km por dia, dá perto de R$ 12 por ano; a Tarifa Branca economiza menos de R$ 2 por ano e vale para a casa toda. Energia solar só compensa como parte de um sistema da casa: a parte da bike custa uns R$ 28 e se paga em 2 a 5 anos. São estimativas, não valores garantidos: dependem dos impostos, da bandeira do mês e do seu uso.",
+    "resposta": "Pela análise da equipe, uma carga completa custa cerca de R$ 0,59 na bike elétrica (bateria de 630 Wh) e R$ 0,21 no patinete (221 Wh), usando a tarifa residencial oficial da Enel (fonte abaixo), sem impostos. Rodando 6 km por dia, dá perto de R$ 12 por ano; a Tarifa Branca economiza menos de R$ 2 por ano e vale para a casa toda. Energia solar só compensa como parte de um sistema da casa: a parte da bike custa uns R$ 28 e se paga em 2 a 5 anos. São estimativas, não valores garantidos: dependem dos impostos, da bandeira do mês e do seu uso.",
     "documentos": [],
     "onde": "Cálculos, premissas e limitações no repositório da equipe: https://github.com/FIAP-GS-02-2026/citizen-assist-ai-energia",
     "fonte": "https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-energia-eletrica.html",

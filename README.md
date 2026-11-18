@@ -158,7 +158,7 @@ Todas as disciplinas do grupo na GS 2026.2 usam o mesmo tema, mobilidade urbana.
 
 ## Fontes consultadas
 
-As fontes das orientações 1 a 17 foram acessadas e conferidas em 16/11/2026, e as de energia em 17/11/2026.
+As fontes das orientações 1 a 17 foram acessadas e conferidas em 16/11/2026, as de energia 18 a 22 em 17/11/2026 e as 23 e 24 em 18/11/2026.
 
 **SPTrans, perguntas e respostas:**
 
