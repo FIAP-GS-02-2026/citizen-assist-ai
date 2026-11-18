@@ -1,6 +1,7 @@
 """Classe BaseConhecimento: lê o JSON, lista categorias e busca a melhor orientação."""
 
 import json
+import os
 import unicodedata
 
 from orientacao import Orientacao
@@ -69,13 +70,13 @@ class BaseConhecimento:
             with open(self.caminho, encoding="utf-8") as arquivo:
                 dados = json.load(arquivo)
         except FileNotFoundError:
-            self.erro = f"Arquivo da base não encontrado: {self.caminho}"
+            self.erro = f"Arquivo da base não encontrado: {os.path.basename(self.caminho)}"
             return False
         except (json.JSONDecodeError, UnicodeDecodeError, ValueError):
-            self.erro = f"Arquivo da base está corrompido (JSON inválido ou fora de UTF-8): {self.caminho}"
+            self.erro = f"Arquivo da base está corrompido (JSON inválido ou fora de UTF-8): {os.path.basename(self.caminho)}"
             return False
         except OSError:
-            self.erro = f"Não foi possível abrir o arquivo da base: {self.caminho}"
+            self.erro = f"Não foi possível abrir o arquivo da base: {os.path.basename(self.caminho)}"
             return False
 
         if not isinstance(dados, list):
