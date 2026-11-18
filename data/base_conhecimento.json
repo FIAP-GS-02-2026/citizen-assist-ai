@@ -478,7 +478,10 @@
       "tarifa da enel",
       "tarifa de luz",
       "carregando",
-      "gasto de energia"
+      "gasto de energia",
+      "gasta pra carregar",
+      "gasta para carregar",
+      "custa pra carregar"
     ],
     "resposta": "Na conta de luz de casa (tarifa residencial B1 da Enel SP, válida desde 04/07/2026 pela Resolução ANEEL nº 3.596/2026), o kWh custa R$ 0,79 na tabela (R$ 472,42 + R$ 316,96 por MWh; 1 MWh = 1.000 kWh). Pela estimativa da equipe, uma carga completa puxa da tomada cerca de 0,74 kWh na bike elétrica (bateria de 630 Wh), uns R$ 0,59, e 0,26 kWh no patinete (221 Wh), uns R$ 0,21, porque perto de 15% da energia vira calor no carregador. A conta final pode sair maior por causa dos impostos e da bandeira do mês.",
     "documentos": [],
