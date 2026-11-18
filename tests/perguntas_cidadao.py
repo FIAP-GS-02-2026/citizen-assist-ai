@@ -38,6 +38,11 @@ AJUSTE = [
     ("patinete eletrico precisa de habilitacao", 21), ("preciso emplacar minha bicicleta eletrica?", 21),
     ("patinete eletrico pode andar na calcada", 22), ("qual a velocidade maxima na ciclovia", 22),
     ("bike eletrica pode andar na ciclofaixa?", 22),
+    # Energia, orientações 23 e 24 (18/11/2026)
+    ("vale a pena carregar a bike com energia solar ou na tomada?", 23), ("quanto custa uma carga completa do patinete", 23),
+    ("quanto gasto por ano carregando a bike eletrica", 23), ("tarifa branca compensa pra carregar bike?", 23),
+    ("onde descarto a bateria velha da bike", 24), ("posso jogar a bateria do patinete no lixo?", 24),
+    ("como reciclar bateria de bike eletrica", 24),
 ]
 
 VALIDACAO = [
@@ -60,4 +65,8 @@ VALIDACAO = [
     ("quero colocar painel solar no telhado, sobra energia vira credito?", 20), ("energia solar compensa na conta da enel", 20),
     ("patinete eletrico tem que emplacar?", 21), ("precisa tirar carteira pra andar de bike eletrica", 21),
     ("posso andar de patinete na calçada?", 22), ("qual o limite de velocidade da bicicleta eletrica na ciclofaixa", 22),
+    # Energia, orientações 23 e 24 (18/11/2026): acerto medido antes do ajuste: 2 de 6. A pergunta "bateria do patinete estragou, onde levo?" segue sem resposta (limitação).
+    ("quanto eu pago de luz pra encher a bateria do patinete uma vez", 23), ("energia solar ou tomada, qual sai mais barato pra bike", 23),
+    ("compensa aderir a tarifa branca so por causa da bike?", 23), ("quanto da por mes a recarga da bicicleta eletrica", 23),
+    ("tem lugar pra reciclar bateria de lítio da bike?", 24),
 ]

@@ -65,8 +65,9 @@ Assistente
 
 O arquivo `data/base_conhecimento.json` é uma lista de dicionários, um por orientação. Cada registro tem os campos `id`, `categoria`, `titulo`, `palavras_chave`, `resposta`, `documentos`, `onde`, `fonte` e `verificado_em`.
 
-- São 22 orientações em 7 categorias: Gratuidades, Tarifas, Bilhete Único, Acessibilidade, Atendimento e reclamação, Linhas e horários, Energia e mobilidade elétrica.
-- Em 16/11/2026 (orientações 1 a 17) e 17/11/2026 (18 a 22), a equipe abriu cada página oficial citada e conferiu, frase a frase, se a resposta estava escrita nela. O que não estava foi retirado.
+- São 24 orientações em 7 categorias: Gratuidades, Tarifas, Bilhete Único, Acessibilidade, Atendimento e reclamação, Linhas e horários, Energia e mobilidade elétrica.
+- Em 16/11/2026 (orientações 1 a 17), 17/11/2026 (18 a 22) e 18/11/2026 (23 e 24), a equipe abriu cada página oficial citada e conferiu, frase a frase, se a resposta estava escrita nela. O que não estava foi retirado.
+- A orientação 23 é a única com estimativa da equipe: ela resume a análise de energia (custo de carregar na tomada, na Tarifa Branca e com energia solar). A resposta avisa que são estimativas, a fonte é a tarifa oficial da Enel e o campo "onde" aponta o repositório com os cálculos, as premissas e as limitações.
 - Ao carregar, o programa valida os tipos de cada registro. Registro incompleto, com tipo errado ou com `id` repetido é ignorado com aviso.
 
 **Uso de dicionários e tuplas:**
@@ -103,10 +104,12 @@ A pergunta, as palavras-chave e o título são comparados sem acentos, sem pontu
 3. **`normalizar()` foi reforçada.** Além do dicionário `ACENTOS` do enunciado, ela remove acentos fora da lista e troca emoji e reticências por espaço.
 4. **Idades viraram palavras-chave.** A busca por regras não interpreta números, então "60 anos" a "64 anos" estão na orientação 2 e "65 anos" a "100 anos" na orientação 1. Assim "meu pai tem 68 anos" encontra a resposta certa.
 
-**Acerto medido:** a pasta `tests/` tem uma bateria de 109 perguntas escritas como um cidadão escreveria, sem acento, com gíria e abreviação.
+**Acerto medido:** a pasta `tests/` tem uma bateria de 121 perguntas escritas como um cidadão escreveria, sem acento, com gíria e abreviação.
 
 - Num grupo de 28 perguntas escritas depois do ajuste das palavras-chave, e que não foi usado para escolhê-las, o acerto foi de 22 em 28 (79%). As falhas viraram as palavras-chave do item 4.
 - Na categoria de energia, 10 perguntas novas, escritas depois do ajuste, acertaram 8 (80%). As 2 falhas ("carregando" e "tirar carteira") viraram palavras-chave.
+- Nas orientações 23 e 24, 6 perguntas novas acertaram só 2 antes do ajuste. Depois do ajuste, "bateria do patinete estragou, onde levo?" ainda não é encontrada: a palavra "estragou" sozinha faria "meu bilhete estragou" cair no descarte de bateria.
+- Resultado atual na bateria inteira: 118 de 121 (97,5%).
 - O teste exige pelo menos 90% de acerto na bateria inteira.
 
 ## Regras de atendimento
@@ -151,7 +154,7 @@ A exportação para `data/atendimentos.csv` usa `csv.DictWriter`. Ela roda pelo 
 
 Todas as disciplinas do grupo na GS 2026.2 usam o mesmo tema, mobilidade urbana.
 
-**Soluções em Energias Renováveis e Sustentáveis:** a categoria "Energia e mobilidade elétrica" (orientações 18 a 22) é a contribuição dessa disciplina dentro do assistente. Ela responde quanto custa carregar bicicleta ou patinete elétrico na tomada, o que muda com a bandeira tarifária, como funcionam os créditos de energia solar em casa e as regras de circulação desses veículos. A análise que compara as alternativas de recarga fica na entrega própria da disciplina.
+**Soluções em Energias Renováveis e Sustentáveis:** a categoria "Energia e mobilidade elétrica" (orientações 18 a 24) é a contribuição dessa disciplina dentro do assistente. Ela responde quanto custa carregar bicicleta ou patinete elétrico na tomada, o que muda com a bandeira tarifária, como funcionam os créditos de energia solar em casa, as regras de circulação desses veículos e onde descartar a bateria. A orientação 23 traz o resultado da análise que compara tomada, Tarifa Branca e energia solar, feita no repositório da disciplina: https://github.com/FIAP-GS-02-2026/citizen-assist-ai-energia
 
 ## Fontes consultadas
 
@@ -189,6 +192,7 @@ As fontes das orientações 1 a 17 foram acessadas e conferidas em 16/11/2026, e
 - Bandeiras tarifárias, ANEEL: https://www.gov.br/aneel/pt-br/assuntos/tarifas/bandeiras-tarifarias
 - Lei 14.300/2022, micro e minigeração distribuída: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm
 - Resolução Contran 996/2023, bicicleta elétrica e autopropelidos: https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9962023.pdf/@@display-file/file
+- Lei 12.305/2010, Política Nacional de Resíduos Sólidos (logística reversa de pilhas e baterias): https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm
 - Prefeitura de SP, velocidade em ciclovias e calçadas: https://prefeitura.sp.gov.br/w/prefeitura-limita-velocidade-de-bicicletas-el%C3%A9tricas-e-patinetes-a-20-km/h-em-ciclovias
 
 ## Teste com usuários
