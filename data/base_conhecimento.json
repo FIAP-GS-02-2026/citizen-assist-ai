@@ -480,7 +480,7 @@
       "carregando",
       "gasto de energia"
     ],
-    "resposta": "Na conta de luz de casa (tarifa residencial B1 da Enel SP, válida desde 04/07/2026 pela Resolução ANEEL nº 3.596/2026), o kWh tem duas partes: R$ 472,42 e R$ 316,96 por MWh, ou seja, cerca de R$ 0,47 e R$ 0,32 por kWh (1 MWh = 1.000 kWh). Para saber quanto gasta, multiplique os kWh que o carregador puxa da tomada pela soma das duas partes.",
+    "resposta": "Na conta de luz de casa (tarifa residencial B1 da Enel SP, válida desde 04/07/2026 pela Resolução ANEEL nº 3.596/2026), o kWh custa R$ 0,79 na tabela (R$ 472,42 + R$ 316,96 por MWh; 1 MWh = 1.000 kWh). Pela estimativa da equipe, uma carga completa puxa da tomada cerca de 0,74 kWh na bike elétrica (bateria de 630 Wh), uns R$ 0,59, e 0,26 kWh no patinete (221 Wh), uns R$ 0,21, porque perto de 15% da energia vira calor no carregador. A conta final pode sair maior por causa dos impostos e da bandeira do mês.",
     "documentos": [],
     "onde": "Tabela de tarifas no site da Enel SP; o valor final aparece na sua conta de luz",
     "fonte": "https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-energia-eletrica.html",
@@ -524,7 +524,7 @@
       "creditos de energia",
       "credito na conta de luz"
     ],
-    "resposta": "Placas solares em casa de até 75 kW são microgeração distribuída e entram no Sistema de Compensação de Energia Elétrica. A energia que você manda para a rede da distribuidora é descontada do seu consumo ou vira crédito de energia. Os créditos expiram 60 meses depois da conta em que foram gerados.",
+    "resposta": "Placas solares em casa de até 75 kW são microgeração distribuída e entram no Sistema de Compensação de Energia Elétrica. A energia que você manda para a rede da distribuidora é descontada do seu consumo ou vira crédito de energia, e os créditos expiram 60 meses depois da conta em que foram gerados. Em sistemas novos, parte da tarifa de distribuição (Fio B) é cobrada sobre a energia compensada: 60% a partir de 2026, 75% a partir de 2027 e 90% a partir de 2028. Para saber se compensa só para carregar a bike, veja a orientação 23.",
     "documentos": [
       "Formulário-padrão da ANEEL para solicitação de acesso, com os documentos que ele indica"
     ],
@@ -604,9 +604,13 @@
       "so pra bike",
       "so pro patinete",
       "por ano carregando",
-      "por mes a recarga"
+      "por mes a recarga",
+      "co2",
+      "emissao",
+      "carbono",
+      "gasto por ano carregando"
     ],
-    "resposta": "Pela análise da equipe, uma carga completa custa cerca de R$ 0,59 na bike elétrica (bateria de 630 Wh) e R$ 0,21 no patinete (221 Wh), usando a tarifa residencial oficial da Enel (fonte abaixo), sem impostos. Rodando 6 km por dia, dá perto de R$ 12 por ano; a Tarifa Branca economiza menos de R$ 2 por ano e vale para a casa toda. Energia solar só compensa como parte de um sistema da casa: a parte da bike custa uns R$ 28 e se paga em 2 a 5 anos. São estimativas, não valores garantidos: dependem dos impostos, da bandeira do mês e do seu uso.",
+    "resposta": "Pela análise da equipe, rodando 6 km por dia, carregar na tomada custa perto de R$ 12 por ano na bike e R$ 13 no patinete (uma carga completa: R$ 0,59 e R$ 0,21) e emite cerca de 0,7 kg de CO2 por ano, pelo fator da rede de 2025 do MCTI. A Tarifa Branca economiza menos de R$ 2 por ano e vale para a casa toda. A energia solar não emite na operação, mas só compensa como parte de um sistema da casa: a parte da bike custa uns R$ 28 e se paga em 2,4 a 5 anos (até 7 nos cenários mais caros), porque a cobrança do Fio B sobe até 2028 (Lei 14.300). Referências: tarifa da Enel, irradiação do SunData/CEPEL, emissões do MCTI e Lei 14.300; o preço do painel é dado de mercado. São estimativas, não valores garantidos: dependem dos impostos, da bandeira do mês e do seu uso.",
     "documentos": [],
     "onde": "Cálculos, premissas e limitações no repositório da equipe: https://github.com/FIAP-GS-02-2026/citizen-assist-ai-energia",
     "fonte": "https://www.enel.com.br/pt-saopaulo/Para_Voce/tarifa-energia-eletrica.html",
@@ -629,7 +633,10 @@
       "logistica reversa",
       "onde levo a bateria",
       "bateria de litio",
-      "levo a bateria"
+      "levo a bateria",
+      "patinete estragou",
+      "bike estragou",
+      "bicicleta estragou"
     ],
     "resposta": "Pela Política Nacional de Resíduos Sólidos, fabricantes, importadores, distribuidores e comerciantes de pilhas e baterias são obrigados a ter sistema de logística reversa, com retorno do produto depois do uso. O consumidor deve devolver a bateria usada aos comerciantes ou distribuidores.",
     "documentos": [],

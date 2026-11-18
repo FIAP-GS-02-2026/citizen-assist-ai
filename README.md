@@ -104,12 +104,12 @@ A pergunta, as palavras-chave e o título são comparados sem acentos, sem pontu
 3. **`normalizar()` foi reforçada.** Além do dicionário `ACENTOS` do enunciado, ela remove acentos fora da lista e troca emoji e reticências por espaço.
 4. **Idades viraram palavras-chave.** A busca por regras não interpreta números, então "60 anos" a "64 anos" estão na orientação 2 e "65 anos" a "100 anos" na orientação 1. Assim "meu pai tem 68 anos" encontra a resposta certa.
 
-**Acerto medido:** a pasta `tests/` tem uma bateria de 121 perguntas escritas como um cidadão escreveria, sem acento, com gíria e abreviação.
+**Acerto medido:** a pasta `tests/` tem uma bateria de 123 perguntas escritas como um cidadão escreveria, sem acento, com gíria e abreviação.
 
 - Num grupo de 28 perguntas escritas depois do ajuste das palavras-chave, e que não foi usado para escolhê-las, o acerto foi de 22 em 28 (79%). As falhas viraram as palavras-chave do item 4.
 - Na categoria de energia, 10 perguntas novas, escritas depois do ajuste, acertaram 8 (80%). As 2 falhas ("carregando" e "tirar carteira") viraram palavras-chave.
-- Nas orientações 23 e 24, 6 perguntas novas acertaram só 2 antes do ajuste. Depois do ajuste, "bateria do patinete estragou, onde levo?" ainda não é encontrada: a palavra "estragou" sozinha faria "meu bilhete estragou" cair no descarte de bateria.
-- Resultado atual na bateria inteira: 118 de 121 (97,5%).
+- Nas orientações 23 e 24, 6 perguntas novas acertaram só 2 antes do ajuste. A palavra "estragou" sozinha não virou palavra-chave, porque faria "meu bilhete estragou" cair no descarte de bateria; entraram "patinete estragou" e "bike estragou".
+- Resultado atual na bateria inteira: 121 de 123 (98,4%).
 - O teste exige pelo menos 90% de acerto na bateria inteira.
 
 ## Regras de atendimento
