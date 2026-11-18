@@ -1,1 +1,12 @@
-data,sessao,origem,pergunta,id_orientacao,encontrou,ajudou,tentativas,tempo_s,nota_facilidade
+﻿data,sessao,origem,pergunta,id_orientacao,encontrou,ajudou,tentativas,tempo_s,nota_facilidade,perguntas_sem_resultado
+2026-11-18 03:08:10,20261118030537,pergunta,"minha vó tem 63 anos, ela paga ônibus?",2,True,True,1,71.3,4,
+2026-11-18 03:08:55,20261118030537,pergunta,"perdi meu bilhete único na rua, e agora?",12,True,True,1,2.2,4,
+2026-11-18 03:09:05,20261118030537,pergunta,quanto gasta de luz pra carregar patinete elétrico?,18,True,True,1,5.0,4,
+2026-11-18 03:12:40,20261118031214,pergunta,"meu filho entrou na faculdade, tem desconto na passagem?",8,True,True,1,6.5,3,
+2026-11-18 03:13:10,20261118031214,pergunta,"o ônibus passou direto no ponto, onde eu reclamo?",,False,False,2,28.0,3,"o ônibus passou direto no ponto, onde eu reclamo?"
+2026-11-18 03:13:18,20261118031214,pergunta,patinete elétrico precisa de placa?,21,True,True,1,2.6,3,
+2026-11-18 03:14:31,20261118031214,pergunta,Como sei o trajeto do onibus que passa na frente da  minha casa?,,False,False,1,56.7,3,
+2026-11-18 03:15:23,20261118031507,pergunta,ônibus é de graça no domingo?,7,True,True,1,8.2,4,
+2026-11-18 03:15:34,20261118031507,pergunta,"meu vizinho usa cadeira de rodas, tem ônibus adaptado?",,False,False,1,9.2,4,
+2026-11-18 03:15:44,20261118031507,pergunta,que horas passa ônibus de madrugada?,17,True,True,1,6.0,4,
+2026-11-18 03:16:16,20261118031507,pergunta,Como recarrego o bilhete?,,False,False,1,28.9,4,

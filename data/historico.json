@@ -1,1 +1,147 @@
-[]
+[
+  {
+    "data": "2026-11-18 03:08:10",
+    "sessao": "20261118030537",
+    "origem": "pergunta",
+    "pergunta": "minha vó tem 63 anos, ela paga ônibus?",
+    "id_orientacao": 2,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_s": 71.3,
+    "nota_facilidade": 4,
+    "perguntas_sem_resultado": []
+  },
+  {
+    "data": "2026-11-18 03:08:55",
+    "sessao": "20261118030537",
+    "origem": "pergunta",
+    "pergunta": "perdi meu bilhete único na rua, e agora?",
+    "id_orientacao": 12,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_s": 2.2,
+    "nota_facilidade": 4,
+    "perguntas_sem_resultado": []
+  },
+  {
+    "data": "2026-11-18 03:09:05",
+    "sessao": "20261118030537",
+    "origem": "pergunta",
+    "pergunta": "quanto gasta de luz pra carregar patinete elétrico?",
+    "id_orientacao": 18,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_s": 5.0,
+    "nota_facilidade": 4,
+    "perguntas_sem_resultado": []
+  },
+  {
+    "data": "2026-11-18 03:12:40",
+    "sessao": "20261118031214",
+    "origem": "pergunta",
+    "pergunta": "meu filho entrou na faculdade, tem desconto na passagem?",
+    "id_orientacao": 8,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_s": 6.5,
+    "nota_facilidade": 3,
+    "perguntas_sem_resultado": []
+  },
+  {
+    "data": "2026-11-18 03:13:10",
+    "sessao": "20261118031214",
+    "origem": "pergunta",
+    "pergunta": "o ônibus passou direto no ponto, onde eu reclamo?",
+    "id_orientacao": null,
+    "encontrou": false,
+    "ajudou": false,
+    "tentativas": 2,
+    "tempo_s": 28.0,
+    "nota_facilidade": 3,
+    "perguntas_sem_resultado": [
+      "o ônibus passou direto no ponto, onde eu reclamo?"
+    ]
+  },
+  {
+    "data": "2026-11-18 03:13:18",
+    "sessao": "20261118031214",
+    "origem": "pergunta",
+    "pergunta": "patinete elétrico precisa de placa?",
+    "id_orientacao": 21,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_s": 2.6,
+    "nota_facilidade": 3,
+    "perguntas_sem_resultado": []
+  },
+  {
+    "data": "2026-11-18 03:14:31",
+    "sessao": "20261118031214",
+    "origem": "pergunta",
+    "pergunta": "Como sei o trajeto do onibus que passa na frente da  minha casa?",
+    "id_orientacao": null,
+    "encontrou": false,
+    "ajudou": false,
+    "tentativas": 1,
+    "tempo_s": 56.7,
+    "nota_facilidade": 3,
+    "perguntas_sem_resultado": []
+  },
+  {
+    "data": "2026-11-18 03:15:23",
+    "sessao": "20261118031507",
+    "origem": "pergunta",
+    "pergunta": "ônibus é de graça no domingo?",
+    "id_orientacao": 7,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_s": 8.2,
+    "nota_facilidade": 4,
+    "perguntas_sem_resultado": []
+  },
+  {
+    "data": "2026-11-18 03:15:34",
+    "sessao": "20261118031507",
+    "origem": "pergunta",
+    "pergunta": "meu vizinho usa cadeira de rodas, tem ônibus adaptado?",
+    "id_orientacao": null,
+    "encontrou": false,
+    "ajudou": false,
+    "tentativas": 1,
+    "tempo_s": 9.2,
+    "nota_facilidade": 4,
+    "perguntas_sem_resultado": []
+  },
+  {
+    "data": "2026-11-18 03:15:44",
+    "sessao": "20261118031507",
+    "origem": "pergunta",
+    "pergunta": "que horas passa ônibus de madrugada?",
+    "id_orientacao": 17,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_s": 6.0,
+    "nota_facilidade": 4,
+    "perguntas_sem_resultado": []
+  },
+  {
+    "data": "2026-11-18 03:16:16",
+    "sessao": "20261118031507",
+    "origem": "pergunta",
+    "pergunta": "Como recarrego o bilhete?",
+    "id_orientacao": null,
+    "encontrou": false,
+    "ajudou": false,
+    "tentativas": 1,
+    "tempo_s": 28.9,
+    "nota_facilidade": 4,
+    "perguntas_sem_resultado": []
+  }
+]
