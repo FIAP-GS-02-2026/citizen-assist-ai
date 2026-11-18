@@ -10,7 +10,6 @@ Global Solution 2026.2 · FIAP · Ciência da Computação 1CCR · Pensamento Co
 | --- | --- |
 | Glauco Kelly | 572840 |
 | Gabriel Fagundes | 569074 |
-| Thiago Renatino | 569073 |
 
 ## Público e problema
 
