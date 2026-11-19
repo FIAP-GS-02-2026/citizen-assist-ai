@@ -196,7 +196,23 @@ As fontes das orientações 1 a 17 foram acessadas e conferidas em 16/11/2026, a
 
 ## Teste com usuários
 
-*Em andamento: esta seção será preenchida com os resultados reais do teste. A meta é de pelo menos 3 pessoas de fora da equipe e 10 atendimentos.*
+3 pessoas de fora da equipe testaram o assistente, com 11 atendimentos registrados no menu 3 (indicadores). As 3 primeiras perguntas de cada pessoa vieram de uma lista sugerida e as demais foram livres.
+
+| Indicador | Resultado |
+|---|---|
+| Resposta encontrada | 63,6% |
+| Taxa de acerto (ajudou) | 63,6% |
+| Tempo médio | 14,5 s |
+| Tentativas por atendimento | 1,1 |
+| Facilidade (1 a 5) | 3,7 |
+
+Dúvidas sem solução:
+- "o ônibus passou direto no ponto, onde eu reclamo?"
+- "Como recarrego o bilhete?"
+- "Como sei o trajeto do onibus..."
+- "meu vizinho usa cadeira de rodas, tem ônibus adaptado?"
+
+Melhoria feita a partir do teste: as palavras "recarrego" (orientação 11), "reclamo" e "passou direto" (orientação 15) entraram na base, e as duas primeiras perguntas passaram a ser encontradas.
 
 ## Limitações
 
