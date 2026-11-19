@@ -217,7 +217,7 @@ Melhoria feita a partir do teste: as palavras "recarrego" (orientação 11), "re
 ## Limitações
 
 - **Escopo:** cobre o ônibus municipal da cidade de São Paulo e, na categoria de energia, bicicleta e patinete elétrico. Metrô e trem aparecem apenas na integração tarifária.
-- **Tarifa de energia:** a orientação 18 mostra a tarifa da tabela da Enel; a página não diz se ela inclui impostos, então o valor final é o da conta de luz.
+- **Tarifa de energia:** a orientação 18 mostra a tarifa homologada da tabela da Enel, sem ICMS, PIS e COFINS; o valor final, com tributos e bandeira, é o da conta de luz.
 - **Regras mudam:** cada orientação mostra a data em que foi conferida, e a pessoa deve confirmar no canal oficial.
 - **Palavras exatas:** a busca não tolera erro de digitação. "pasagem" pontua menos que "passagem", e "idozo" não encontra nada. A navegação por categorias é a alternativa.
 - **Empates:** em empate de pontos vence o menor `id`, e a resposta certa pode aparecer como alternativa.
