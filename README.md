@@ -226,4 +226,4 @@ Melhoria feita a partir do teste: as palavras "recarrego" (orientação 11), "re
 
 ## Vídeo técnico
 
-*O link será adicionado após a gravação.*
+https://youtu.be/PSIrQ6qiV1s (YouTube, não listado)
