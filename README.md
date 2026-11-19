@@ -212,7 +212,7 @@ Dúvidas sem solução:
 - "Como sei o trajeto do onibus..."
 - "meu vizinho usa cadeira de rodas, tem ônibus adaptado?"
 
-Melhoria feita a partir do teste: as palavras "recarrego" (orientação 11), "reclamo" e "passou direto" (orientação 15) entraram na base, e as duas primeiras perguntas passaram a ser encontradas.
+Melhorias feitas a partir do teste: as palavras "recarrego" (orientação 11), "reclamo" e "passou direto" (orientação 15) entraram na base, e as duas primeiras perguntas passaram a ser encontradas. Depois, "cadeira de rodas" entrou na orientação 13 (Atende+), a alteração mostrada ao vivo no vídeo técnico. "Como sei o trajeto do onibus..." continua sem solução, porque o assistente não tem dados de linhas em tempo real.
 
 ## Limitações
 
